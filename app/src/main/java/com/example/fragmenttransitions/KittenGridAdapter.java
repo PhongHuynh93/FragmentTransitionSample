@@ -61,8 +61,11 @@ public class KittenGridAdapter extends RecyclerView.Adapter<KittenViewHolder> {
         // because then we would have conflicting transition names.
         // By appending "_image" to the position, we can support having multiple shared elements in each
         // grid cell in the future.
-        ViewCompat.setTransitionName(viewHolder.image, String.valueOf(position) + "_image");
 
+        /**
+         * todo 4 - nhớ là ta phải đặt transition name khác nhau ứng với từng row trong list, nên ta ko thể đặt tên trong layout được mà phải đặt tên trong này.
+         */
+        ViewCompat.setTransitionName(viewHolder.image, String.valueOf(position) + "_image");
         viewHolder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

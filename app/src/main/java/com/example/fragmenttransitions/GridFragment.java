@@ -51,8 +51,10 @@ public class GridFragment extends Fragment implements KittenClickListener {
             setExitTransition(new Fade());
         }
 
-        // TODO: 8/21/16 3 - nhớ lệnh addShareElement nếu ta sd share element
-        // chú ý addSharedElement(view frag1, tên transition frag 2)
+        /** TODO: 8/21/16 3 - nhớ lệnh addShareElement nếu ta sd share element
+         * todo 3b chú ý addSharedElement(view frag1, tên transition frag 2)
+         *
+         */
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .addSharedElement(holder.image, "kittenImage")
