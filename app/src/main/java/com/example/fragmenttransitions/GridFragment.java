@@ -43,12 +43,16 @@ public class GridFragment extends Fragment implements KittenClickListener {
         // are not in the support library and are only available in API 21+. The methods we are calling on the Fragment
         // ARE available in the support library (though they don't do anything on API < 21)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            // TODO: 8/21/16 1 - set share ele enter và return là giống nhau 
             kittenDetails.setSharedElementEnterTransition(new DetailsTransition());
+            kittenDetails.setSharedElementReturnTransition(new DetailsTransition());
+            // TODO: 8/21/16 2 - set enter and exit transition là giống nhau 
             kittenDetails.setEnterTransition(new Fade());
             setExitTransition(new Fade());
-            kittenDetails.setSharedElementReturnTransition(new DetailsTransition());
         }
 
+        // TODO: 8/21/16 3 - nhớ lệnh addShareElement nếu ta sd share element
+        // chú ý addSharedElement(view frag1, tên transition frag 2)
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .addSharedElement(holder.image, "kittenImage")

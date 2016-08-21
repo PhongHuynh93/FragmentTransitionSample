@@ -10,6 +10,8 @@ import android.transition.TransitionSet;
 import android.util.AttributeSet;
 
 /**
+ * todo 1b - set cái này dạng xml sẽ dễ hiểu hơn
+ * @see <a href="http://guides.codepath.com/android/Shared-Element-Activity-Transition#assign-a-common-transition-name"></a>
  * Transition that performs almost exactly like {@link android.transition.AutoTransition}, but has an
  * added {@link ChangeImageTransform} to support properly scaling up our gorgeous kittens.
  *
